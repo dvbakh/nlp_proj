@@ -1,0 +1,87 @@
+<!doctype html>
+
+<!-- так в HTML обозначаются комментарии. Выше вы видите объявление типа документа (DOCTYPE), так браузер понимает, что код ниже нужно интерпретировать как html -->
+
+<html>
+
+<!-- зона заголовка html, тег <title> - строка, которую браузер отображает на вкладках над страницами, <meta> и <link> сообщают технические сведения для браузера, например, что файл имеет кодировку Юникод (utf-8) -->
+
+	<head>
+	
+		<title> Корпус текстов Братьев Стругацких </title>
+	 	<!-- Required meta tags -->
+	 	<meta charset="utf-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Проект по Автобрее">
+
+		<!-- Bootstrap Core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<!-- Эта страница сделана с помощью bootstrap - популярной библиотеки для создания и настройки сайтов. Ниже вы увидите, что многие теги содержат атрибуты class - bootstrap содержит шаблоны, как такие элементы красиво оформить -->
+
+	</head>
+	
+	<!-- body - главная, содержательная часть страницы. Контент на этой странице делится на меню (nav), "шапку" (header), "подвал" (footer) и все остальное (мы заключили остаток в тег section) -->	
+	<body style="background-color:#bdbec3;>
+<!-- меню (navigation bar) -->
+	<font face="courier new" >
+
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom" style="background-color:#1b212c; border-bottom-color:#1b212c"
+		
+<!-- div - это контейнеры - коробочки с текстом и/или графикой, которые можно вкладывать друг в друга. Пристально смотреть на теги в этой части кода не нужно -->
+			<div class="container">
+				<div class="navbar-header"> 
+				
+					<a class="navbar-brand" style="color:#d9e2e1"><font face="courier new" >Корпус Текстов Аркадия и Бориса Стругацких</a> 
+				</div> 
+				<nav class="collapse navbar-collapse" id="bs-navbar"> 
+					<ul class="nav navbar-nav navbar-right"> 
+						<li> <a style="color:#d9e2e1">Главная страница</a> </li>
+					</ul>
+				</nav> 
+			</div>
+		</nav>
+
+
+<!-- часть страницы, которая под шапкой -->
+		<header style="background-color:#bdbec3; padding-top:80px;"><header>
+		<form method="POST" action="{{ url_for('search') }}">
+			<div class="container" style="background-color:#a1a2a5; padding-bottom:30px;">
+				<span class="border border-dark">
+					<div class="mb-3" >
+						<h1><p class="text-left"><font color="#1b212c"> <b> Поиск по корпусу </b> </p>	 </h1>
+						<input type="text" class="form-control" name="words" placeholder="Искать">
+					</div>
+				</span>
+			</div>	
+		</form>
+		<div class="container" style="background-color:#bdbec3; padding-top:10px; padding-bottom:20px;">
+			<hr style="border-color:#292929;" "border: 2px solid blue;">
+			<h1><p class="text-left"><font color="#1b212c"> <b> Описание проекта </b> </p>	 </h1>
+			<h4><p class="text"> Цель проекта - создание корпуса текстов Братьев Стругацких с функцией поиска. <br> Формат поиска таков:
+				<ul type="circle">
+					<li>лемма/словоформа (ищет вхождения во всех формах);</li>
+					<li>словоформа/фраза в двойных кавычках (ищет только заданную форму);</li>
+					<li>лемма и POS-тег (ищет все формы, отмеченные данным тегом).</li>
+				</ul>
+				Список и обозначения тегов можно посмотреть <a href="https://universaldependencies.org/u/pos/"style="color:#2b2e36"><b>тут</b></a>.
+<br><br> <b> Примеры запросов: </b>
+				<ul type="square">
+					<li> <i>поиск</i> - нужно найти все предложения, где слово встречается в любой форме </li>
+					<li> “поиска” - нужно найти предложения только с этой формой </li>
+					<li> знать+NOUN - нужно найти все предложения, где встречается существительное “знать” </li>
+					<li> NOUN - найти все предложения с существительными </li>
+				</ul>
+
+			<hr style="border-color:#292929;" "border: 2px solid blue;">
+			</p></h4>
+		</div>
+<!-- это подвал. В этой части страницы обычно ставят копирайт (с помощью символа &copy;) и пишут об истории создания страницы. Поставьте свой копирайт -->
+		<footer class="bs-docs-footer" style="background-color:#1b212cd4"> 
+			<div class="container"> 
+				<p style="text-align:right;"><font color="#d9e2e1">&copy; Бахвалов Д. В., 2023</p> 
+			</div>
+		</footer>
+		</font color>
+	</body>
+</html>
