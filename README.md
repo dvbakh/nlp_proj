@@ -1,1 +1,2 @@
-It is a corpus of texts by the Strugatsky brothers, which implements a search for words and/or parts of speech in all possible combinations. Everything is described in more detail in the notebook. 
+# What is it?
+It is an individual project at the end of the second year of study. The goal is to write a demo application, which is a corpus of texts by the Strugatsky brothers, and implement in it the function of searching by word, by part of speech, or both at the same time. It is possible to search from one to three words in a row. Everything is described in more detail in the [notebook](https://github.com/dvbakh/nlp_project/blob/main/project_nlp_final.ipynb).
